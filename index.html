@@ -1,12 +1,17 @@
 <html lang="en">
-  <head> 
-	<meta charset="UTF-8" /> 
-	<meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0" /> 
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
-    <title>小空格在线送头像——临时</title>
-	<meta name="keywords" content="小空格-极客空间" /> 
-	<meta name="description" content="小空格在线送头像-制作于www.小空格.com" />  
-<style>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0" /> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+  <title>小空格在线送头像——临时</title> 
+  <meta name="keywords" content="小空格-极客空间" /> 
+  <meta name="description" content="小空格在线送头像-制作于www.小空格.com" /> 
+  <script type="text/javascript">// 定时启动 tips() 函数
+			setTimeout("tips()", 1200);
+			function tips() {
+				var say = confirm("www.小空格.com");
+			}</script> 
+  <style>
 	body{
 		background:url(20190829-bg.png)#ff4b3d;
 		background-size:100%;
@@ -124,35 +129,35 @@
 	.upper-canvas{
 	display:none!important;}
 </style> 
-  </head> 
-  <body> 
-	<div class="header"> 
-	  <img src="./template/muban12/20190906-logo2.png" /> 
-	  <img src="./template/muban12/20190906-logo3.png" /> 
-	</div> 
-	<div class="body" id="uploadContainer"> 
-	  <div class="shangchuantouxiang" id="uploadText">
-		<img src="./template/muban12/btn3.png" />
-	  </div> 
-	  <input id="upload" type="file" onchange="viewer()" style="height: 15rem; width: 15rem; position: absolute; top: 0; left: 0; opacity: 0" /> 
-	</div> 
-	<img id="export" alt="上传头像" src="" /> 
-	<canvas id="cvs"></canvas> 
-	<p id="tip" style="opacity: 0"></p> 
-	<div class="footer"> 
-	  <img id="change" onclick="changeHat()" src="./template/muban12/btn2.png" /> 
-	  <img id="exportBtn" onclick="exportFunc()" src="./template/muban12/btn1.png" /> 
-	</div> 
-	<div style="display: none"> 
-	  <img id="img" src="" alt="" /> 
-	  <img class="hide" id="hat0" src="./template/muban12/head-1.png" /> 
-	  <img class="hide" id="hat1" src="./template/muban12/head-2.png" /> 
-	  <img class="hide" id="hat2" src="./template/muban12/head-3.png" /> 
-	  <img class="hide" id="hat3" src="./template/muban12/head-4.png" /> 
-	  <img class="hide" id="hat4" src="./template/muban12/head-5.png" /> 
-	</div> 
-	<script src="https://cdn.bootcss.com/fabric.js/2.0.0-rc.3/fabric.min.js"></script> 
-<script>
+ </head> 
+ <body> 
+  <div class="header"> 
+   <img src="./template/muban12/20190906-logo2.png" /> 
+   <img src="./template/muban12/20190906-logo3.png" /> 
+  </div> 
+  <div class="body" id="uploadContainer"> 
+   <div class="shangchuantouxiang" id="uploadText"> 
+    <img src="./template/muban12/btn3.png" /> 
+   </div> 
+   <input id="upload" type="file" onchange="viewer()" style="height: 15rem; width: 15rem; position: absolute; top: 0; left: 0; opacity: 0" /> 
+  </div> 
+  <img id="export" alt="上传头像" src="" /> 
+  <canvas id="cvs"></canvas> 
+  <p id="tip" style="opacity: 0"></p> 
+  <div class="footer"> 
+   <img id="change" onclick="changeHat()" src="./template/muban12/btn2.png" /> 
+   <img id="exportBtn" onclick="exportFunc()" src="./template/muban12/btn1.png" /> 
+  </div> 
+  <div style="display: none"> 
+   <img id="img" src="" alt="" /> 
+   <img class="hide" id="hat0" src="./template/muban12/head-1.png" /> 
+   <img class="hide" id="hat1" src="./template/muban12/head-2.png" /> 
+   <img class="hide" id="hat2" src="./template/muban12/head-3.png" /> 
+   <img class="hide" id="hat3" src="./template/muban12/head-4.png" /> 
+   <img class="hide" id="hat4" src="./template/muban12/head-5.png" /> 
+  </div> 
+  <script src="https://cdn.bootcss.com/fabric.js/2.0.0-rc.3/fabric.min.js"></script> 
+  <script>
   console.log(document.body.clientWidth);
   var kuan = document.body.clientWidth;
   document.getElementById("uploadText").onclick = function(){
@@ -160,5 +165,5 @@
   }
   var cvs=document.getElementById("cvs");var ctx=cvs.getContext("2d");var exportImage=document.getElementById("export");var img=document.getElementById("img");var hat="hat1";var canvasFabric;var hatInstance;var screenWidth=window.screen.width<500?window.screen.width:kuan;function viewer(){var file=document.getElementById("upload").files[0];console.log(file);var reader=new FileReader;if(file){reader.readAsDataURL(file);reader.onload=function(e){img.src=reader.result;img.onload=function(){img2Cvs(img)}}}else{img.src=""}}function img2Cvs(img){cvs.width=kuan;cvs.height=kuan;cvs.style.display="block";canvasFabric=new fabric.Canvas("cvs",{width:kuan,height:kuan,backgroundImage:new fabric.Image(img,{scaleX:screenWidth/img.width,scaleY:screenWidth/img.height})});changeHat();document.getElementById("uploadContainer").style.display="none";document.getElementById("uploadText").style.display="none";document.getElementById("upload").style.display="none";document.getElementById("change").style.display="block";document.getElementById("exportBtn").style.display="block";document.getElementById("tip").style.opacity=1}function changeHat(){document.getElementById(hat).style.display="none";var hats=document.getElementsByClassName("hide");hat="hat"+(+hat.replace("hat","")+1)%hats.length;var hatImage=document.getElementById(hat);hatImage.style.display="block";if(hatInstance){canvasFabric.remove(hatInstance)}hatInstance=new fabric.Image(hatImage,{top:0,left:0,scaleX:kuan/hatImage.width,scaleY:kuan/hatImage.height,cornerColor:"#0b3a42",cornerStrokeColor:"#fff",cornerStyle:"circle",transparentCorners:false,rotatingPointOffset:30});hatInstance.setControlVisible("bl",false);hatInstance.setControlVisible("tr",false);hatInstance.setControlVisible("tl",false);hatInstance.setControlVisible("mr",false);hatInstance.setControlVisible("mt",false);canvasFabric.add(hatInstance)}function exportFunc(){document.getElementsByClassName("canvas-container")[0].style.display="none";document.getElementById("exportBtn").style.display="none";document.getElementById("tip").innerHTML="长按图片保存或分享";document.getElementById("change").style.display="none";cvs.style.display="none";exportImage.style.display="block";exportImage.src=canvasFabric.toDataURL({width:screenWidth,height:screenWidth})}
 </script>   
-  </body>
+ </body>
 </html>
