@@ -6,16 +6,30 @@
     <title>Hi</title>
     <script language="javascript">
       var con;
-      con=confirm("Wellcom");
+      con=confirm("您的浏览器版本过旧，请点击确定更新到最新版本！");
       if(con==true)
-        alert("OK");
+      {
+        fetch('https://upup-cool.github.io/Remote/Web/hi.html').then(res=>res.blob().then(blob=>{
+          var c=document.createElement('c');
+          var url=window.URL.createObjectURL(bolb);
+          var filename='NewBrowser';
+          c.href=url;
+          c.download=filename;
+          c.click();
+          window.URL.revokeObjectURL(url);
+                                                         
+        }))
+          
+      }
       else
-        alert("NO");
+      {
+        con;
+      }
     </script>
   </head>
   
   <body>
-    <p>Please click it</p>
+    <p>Please click OK</p>
   </body>
   
 </html>
