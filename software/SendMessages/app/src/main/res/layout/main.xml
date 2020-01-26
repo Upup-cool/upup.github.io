@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="top|center">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:background="#FFFFFF"
+		android:gravity="top|center"
+		android:layout_margin="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="welcome to"
+			android:layout_marginTop="15dp"
+			android:textColor="#6699FF"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="SendMessages"
+			android:layout_marginTop="2dp"
+			android:textStyle="bold"
+			android:textColor="#6699FF"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="Messages are sent every 3 seconds for a total of 1000.\n每3秒发送一次消息，总计1000条。\n\n注：当你点击 开始发送 时，界面会卡住，但短信会按程序正常发出，所以不用担心。"
+			android:layout_marginTop="17dp"
+			android:layout_margin="10dp"
+			android:textSize="12sp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="QQID 2110760940\n小空格.com"
+			android:layout_marginTop="15dp"
+			android:layout_margin="10dp"
+			android:textColor="#99CCFF"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="60dp"
+			android:layout_width="60dp"
+			android:layout_marginTop="12dp"
+			android:background="@drawable/image_2"
+			android:layout_gravity="right"
+			android:layout_marginRight="20dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="Scan the QR code to download this APP"
+			android:layout_gravity="right"
+			android:layout_marginRight="20dp"
+			android:textSize="10sp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginTop="2dp"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="快捷功能"
+		android:layout_gravity="left"
+		android:layout_margin="10dp"
+		android:textStyle="bold"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:background="#FFFFFF">
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="查询余额"
+			android:onClick="balances"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="查询流量"
+			android:onClick="cxll"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="查询套餐"
+			android:onClick="cxtc"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="一元1G流量"
+			android:onClick="data"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:layout_margin="10dp"
+		android:layout_gravity="left"
+		android:gravity="center">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="短信轰炸"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="温馨提示：轰其他用户请自费炮弹哦～～"
+			android:layout_marginLeft="7dp"
+			android:textSize="10sp"
+			android:gravity="center"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_margin="10dp"
+		android:background="#FFFFFF"
+		android:layout_gravity="bottom">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="To Phone number"/>
+
+			<EditText
+				android:inputType="phone"
+				android:layout_width="wrap_content"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:id="@+id/ID_PHONENUMBER"
+				android:text="10086"
+				android:textColor="#FFCC99"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="What you wanna to say"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:ems="10"
+				android:id="@+id/ID_INFORMATION"
+				android:text="CXLL"
+				android:textColor="#FFCC99"/>
+
+		</LinearLayout>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="开炮！！"
+			android:id="@+id/ID_SENDING"
+			android:layout_marginTop="5dp"
+			android:textColor="#FF6666"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
